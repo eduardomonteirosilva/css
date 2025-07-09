@@ -10,6 +10,12 @@
     src: url(Passion_One/PassionOne-Bold.ttf) format('truetype')
 }
 
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Versos', cursive;
+    --fonte3: 'Título', cursive;
+}
+
 header {
     background-color: black;
     color: white;
@@ -20,10 +26,9 @@ header {
 }
 
 header h1 {
-    margin-top: -10px;
-    margin-bottom: -10px;
-    padding: 20px;
-    padding-top: 30px;
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-size: 10vw;
 }
 
 header p {
@@ -31,18 +36,50 @@ header p {
     margin-top: -20px;
 }
 
-header a {
+header a, footer a {
     color: white;
     text-decoration: none;
+    font-weight: bolder;
 }
 
-body {
-    font-family: 'Versos', sans-serif;
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+html,body {
+    font-family: var(--fonte1);
+    min-height: 100vh;
+    background-color: darkgray;
 }
 
 section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
     padding-left: 30px;
-    padding-top: 30px;
+    font-family: var(--fonte3);
+    font-size: 2em;
+}
+
+section.cartinhas, section.joaninha > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#cartas {
+    color: white;
+    background-image: url(imagens/background002.jpg);
+    background-position: center right;
+    background-attachment: fixed;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.315) 10px;
 }
 
 #flor {
@@ -53,21 +90,20 @@ section {
     box-shadow: 10px 10px rgba(0, 0, 0, 0.315) 10px;
 }
 
-#cartas {
-    color: white;
-    background-image: url(imagens/background002.jpg);
-    background-position: center right;
-    background-attachment: fixed;
-}
-
 .joaninha {
     background-color: rgba(0, 0, 0, 0.274);
     margin-right: 1500px;
     min-width: 200px;
+    background-position: right center;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.123);
+    background-attachment: fixed;
 }
 
 .cartinhas {
     background-color: rgba(0, 0, 0, 0.342);
     margin-right: 1500px;
     min-width: 200px;
+    background-position: right center;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.123);
+    background-attachment: fixed;
 }
